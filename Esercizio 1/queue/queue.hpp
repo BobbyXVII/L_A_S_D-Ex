@@ -13,7 +13,7 @@ namespace lasd {
 /* ************************************************************************** */
 
 template <typename Data>
-class Queu {
+class Queue {
   // Must extend ClearableContainer
 
 private:
