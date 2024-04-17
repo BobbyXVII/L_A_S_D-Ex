@@ -69,7 +69,9 @@ protected:
     /* ********************************************************************** */
 
     // Comparison operators
+    inline bool operator==(const Node &) const noexcept;
 
+    inline bool operator!=(const Node &) const noexcept;
     // ...
 
     /* ********************************************************************** */
@@ -86,6 +88,7 @@ public:
 
   // Default constructor
   // List() specifiers;
+  List() = default;
 
   /* ************************************************************************ */
 
