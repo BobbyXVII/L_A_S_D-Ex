@@ -15,10 +15,9 @@ namespace lasd {
 /* ************************************************************************** */
 
 template <typename Data>
-class List {
-  // Must extend ClearableContainer,
-  //             LinearContainer<Data>,
-  //             DictionaryContainer<Data>
+class List : virtual public ClearableContainer,
+             virtual public LinearContainer<Data>,
+             virtual public DictionaryContainer<Data>{
 
 private:
 
@@ -30,30 +29,47 @@ protected:
 
   struct Node {
 
-    // Data
-    // ...
+      // Data
+      // ...
+      Data element;
+      Node *ptrnext = nullptr;
+      /* ********************************************************************** */
+
+      // Specific constructors
+      Node() = default;
+
+      //costruttore con valore
+      Node(const Data &value) : element(value) {}
+
+      //costruttore con valore e puntatore al nodo succesivo
+      Node(const Data &value, Node *ptrNextElement) : element(value), ptrnext(ptrNextElement) {}
 
     /* ********************************************************************** */
 
-    // Specific constructors
-    // ...
+      // Copy constructor
+      Node(const Node &);
+
+      // Move constructor
+      Node(Node &&)noexcept;
 
     /* ********************************************************************** */
 
-    // Copy constructor
-    // ...
+      //Copy assignment
+      Node& operator=(const Node &);
 
-    // Move constructor
-    // ...
+      //move assignment
+      Node& operator=(Node &&)noexcept;
 
     /* ********************************************************************** */
 
     // Destructor
+    virtual ~Node() = default;
     // ...
 
     /* ********************************************************************** */
 
     // Comparison operators
+
     // ...
 
     /* ********************************************************************** */
@@ -64,7 +80,7 @@ protected:
 
   };
 
-  // ...
+  Node* head = nullptr; // Puntatore al primo nodo della lista
 
 public:
 

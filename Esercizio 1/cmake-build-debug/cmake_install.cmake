@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/feder/Desktop/Università/LASD/L_A_S_D-Ex/Esercizio 1
+# Install script for directory: C:/Users/Roberto/Desktop/UNIVERSITA'/Informatica/Lavori su C/LASD/L_A_S_D Ex/Esercizio 1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/feder/Desktop/Università/LASD/L_A_S_D-Ex/Esercizio 1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Roberto/Desktop/UNIVERSITA'/Informatica/Lavori su C/LASD/L_A_S_D Ex/Esercizio 1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
